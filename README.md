@@ -1,3 +1,13 @@
+
+---
+## 改进
+
+#### 2021-01-07 12:16:38
+1.添加 fontName 参数。
+2.添加列表，预览系统所有字体。
+
+---
+
 本文就主要讲一下文字动画实现原理。
 
 文字动画可以分为两部分：
@@ -91,5 +101,3 @@ pathLayer.strokeEnd = 0;
 }
 ```
 至此，一个文字动画就完成了
-
-本文demo的github地址：<a>https://github.com/zephyrw/TextAnimationDemo.git</a>

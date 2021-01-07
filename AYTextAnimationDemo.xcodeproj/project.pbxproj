@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		187D777F25A6BF74000F6112 /* FontCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D777E25A6BF74000F6112 /* FontCell.m */; };
 		3E0B36BA1E499F440049333A /* CALayer+AYTextAnimationExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0B36B91E499F440049333A /* CALayer+AYTextAnimationExtension.m */; };
 		3E9513A11E45D657007C1EAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9513A01E45D657007C1EAC /* main.m */; };
 		3E9513A41E45D657007C1EAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9513A31E45D657007C1EAC /* AppDelegate.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		187D777D25A6BF74000F6112 /* FontCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontCell.h; sourceTree = "<group>"; };
+		187D777E25A6BF74000F6112 /* FontCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontCell.m; sourceTree = "<group>"; };
 		3E0B36B81E499F440049333A /* CALayer+AYTextAnimationExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+AYTextAnimationExtension.h"; sourceTree = "<group>"; };
 		3E0B36B91E499F440049333A /* CALayer+AYTextAnimationExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AYTextAnimationExtension.m"; sourceTree = "<group>"; };
 		3E95139C1E45D657007C1EAC /* AYTextAnimationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AYTextAnimationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		187D777B25A6BCEC000F6112 /* AYTextAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				3E0B36B81E499F440049333A /* CALayer+AYTextAnimationExtension.h */,
+				3E0B36B91E499F440049333A /* CALayer+AYTextAnimationExtension.m */,
+			);
+			name = AYTextAnimation;
+			sourceTree = "<group>";
+		};
 		3E9513931E45D656007C1EAC = {
 			isa = PBXGroup;
 			children = (
@@ -63,10 +75,11 @@
 			children = (
 				3E9513A21E45D657007C1EAC /* AppDelegate.h */,
 				3E9513A31E45D657007C1EAC /* AppDelegate.m */,
-				3E0B36B81E499F440049333A /* CALayer+AYTextAnimationExtension.h */,
-				3E0B36B91E499F440049333A /* CALayer+AYTextAnimationExtension.m */,
+				187D777B25A6BCEC000F6112 /* AYTextAnimation */,
 				3E9513A51E45D657007C1EAC /* ViewController.h */,
 				3E9513A61E45D657007C1EAC /* ViewController.m */,
+				187D777D25A6BF74000F6112 /* FontCell.h */,
+				187D777E25A6BF74000F6112 /* FontCell.m */,
 				3E9513A81E45D657007C1EAC /* Main.storyboard */,
 				3E9513AB1E45D657007C1EAC /* Assets.xcassets */,
 				3E9513AD1E45D657007C1EAC /* LaunchScreen.storyboard */,
@@ -116,8 +129,7 @@
 				TargetAttributes = {
 					3E95139B1E45D657007C1EAC = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = X46N782Q77;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -126,6 +138,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -159,6 +172,7 @@
 			files = (
 				3E9513A71E45D657007C1EAC /* ViewController.m in Sources */,
 				3E0B36BA1E499F440049333A /* CALayer+AYTextAnimationExtension.m in Sources */,
+				187D777F25A6BF74000F6112 /* FontCell.m in Sources */,
 				3E9513A41E45D657007C1EAC /* AppDelegate.m in Sources */,
 				3E9513A11E45D657007C1EAC /* main.m in Sources */,
 			);
@@ -278,11 +292,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = X46N782Q77;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AYTextAnimationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wpsd.AYTextAnimationDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -290,11 +306,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = X46N782Q77;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AYTextAnimationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wpsd.AYTextAnimationDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

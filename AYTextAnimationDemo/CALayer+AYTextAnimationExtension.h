@@ -12,4 +12,7 @@
 
 - (CAShapeLayer *)setupAnimationTextLayerWithText:(NSString *)text fontSize:(CGFloat)fontSize fontColor:(UIColor *)fontColor;
 
+/// 添加 fontName 参数
+- (CAShapeLayer *)setupAnimationTextLayerWithText:(NSString *)text fontSize:(CGFloat)fontSize fontName:(NSString *)fontName fontColor:(UIColor *)fontColor;
+
 @end

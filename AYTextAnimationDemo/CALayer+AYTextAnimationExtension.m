@@ -11,11 +11,22 @@
 
 @implementation CALayer (AYTextAnimationExtension)
 
-- (CAShapeLayer *)setupAnimationTextLayerWithText:(NSString *)text fontSize:(CGFloat)fontSize fontColor:(UIColor *)fontColor {
-    
+- (CAShapeLayer *)setupAnimationTextLayerWithText:(NSString *)text fontSize:(CGFloat)fontSize fontColor:(UIColor *)fontColor
+{
+    return [self setupAnimationTextLayerWithText:text fontSize:fontSize fontName:@"HelveticaNeue-UltraLight" fontColor:fontColor];
+}
+
+- (CAShapeLayer *)setupAnimationTextLayerWithText:(NSString *)text fontSize:(CGFloat)fontSize fontName:(NSString *)fontName fontColor:(UIColor *)fontColor
+{
     CGMutablePathRef letters = CGPathCreateMutable();
     
-    CTFontRef font = CTFontCreateWithName(CFSTR("HelveticaNeue-UltraLight"), fontSize, NULL);
+    CTFontRef font;
+    if (fontName.length) {
+        font = CTFontCreateWithName((CFStringRef)fontName, fontSize, NULL);
+    }else{
+        font = CTFontCreateWithName(CFSTR("HelveticaNeue-UltraLight"), fontSize, NULL);
+    }
+    
     NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:
                            (__bridge id)font, kCTFontAttributeName,
                            nil];
